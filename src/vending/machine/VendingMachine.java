@@ -1,18 +1,22 @@
-
 package vending.machine;
+
+// Importing necessary modules
 import java.util.Scanner ;
 
 public class VendingMachine {
 
-    
+    // Main class executes the main code
     public static void main(String[] args) {
      System.out.println("Welcome! To my humble shop! \n");
      int Items = displayMenu( ) ;
      int Price = priceCheck(Items) ;
      int change = insertMoney(Price) ;
+
+     // recieve change is a special method to calculate how much change is due.
      recieveChange(change) ;
     }
     
+    // method to display a menu for customers 
     public static int displayMenu( ) {
         Scanner select = new Scanner(System.in) ;
         
@@ -29,6 +33,7 @@ public class VendingMachine {
         return user_select ;
     }
     
+    // price check for users
     public static int priceCheck(int menuSelect) {
         
         if (menuSelect == 1)
